@@ -1,0 +1,22 @@
+<%- include("partials/header.ejs")%>
+
+
+  <% if (locals.yourText){%>
+    <h1>
+      <%= name %>
+        <br>
+        <%= yourText %>
+          <form action="/" method="get">
+            <input type="submit" value="SUBMIT" />
+          </form>
+    </h1>
+    <%} else {%>
+      <form action="/myPost" method="post">
+        <input name="name" type="text" placeholder="Name" required />
+        <textarea name="post" type="text" placeholder="Type Your Post hear!" required></textarea>
+        <input type="submit" value="SUBMIT" />
+      </form>
+      <% } %>
+
+
+        <%- include("partials/footer.ejs")%>
